@@ -10,25 +10,38 @@ import BuyingNotes from "@/components/BuyingNotes";
 import HowItWorks from "@/components/HowItWorks";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <>
       <Navbar />
 
-      <main>
+      <main id="top">
         <Hero />
+
         <Problem />
+
         <Services />
+
         <SignalLoop />
+
         <BehindBolt />
+
         <Work />
+
         <Packages />
+
         <BuyingNotes />
+
         <HowItWorks />
+
         <FAQ />
+
         <Contact />
       </main>
+
+      <Footer />
     </>
   );
 }

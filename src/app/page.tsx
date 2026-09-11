@@ -4,6 +4,7 @@ import Problem from "@/components/Problem";
 import Services from "@/components/Services";
 import SignalLoop from "@/components/SignalLoop";
 import BehindBolt from "@/components/BehindBolt";
+import Work from "@/components/Work";
 
 export default function Home() {
   return (
@@ -16,13 +17,7 @@ export default function Home() {
         <Services />
         <SignalLoop />
         <BehindBolt />
-
-        <section id="work" className="future-section">
-          <div className="section-shell">
-            <div className="section-eyebrow">WORK</div>
-            <h2>SHOW, DON&apos;T TELL.</h2>
-          </div>
-        </section>
+        <Work />
 
         <section id="packages" className="future-section">
           <div className="section-shell">

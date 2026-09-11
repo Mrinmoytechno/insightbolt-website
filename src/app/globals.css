@@ -2870,8 +2870,8 @@ section {
 .package-badge {
   position: absolute;
 
-  top: 0;
-  right: 0;
+  top: 12px;
+  right: 12px;
 
   padding: 8px 12px;
 

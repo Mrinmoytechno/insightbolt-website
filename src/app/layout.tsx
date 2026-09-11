@@ -15,12 +15,12 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "InsightBolt" }],
   creator: "InsightBolt",
-  metadataBase: new URL("https://insightbolt.vercel.app"),
+  metadataBase: new URL("https://insightbolt-marketing.vercel.app"),
   openGraph: {
     title: "InsightBolt — Marketing That Makes Sense",
     description:
       "For businesses people think about before they buy.",
-    url: "https://insightbolt.vercel.app",
+    url: "https://insightbolt-marketing.vercel.app",
     siteName: "InsightBolt",
     type: "website",
   },

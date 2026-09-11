@@ -18,7 +18,7 @@ const sources = [
 
 export default function SignalLoop() {
   return (
-    <section className="signal-section section-dark" id="process">
+    <section className="signal-section section-dark" id="signal-loop">
       <div className="container">
         <div className="signal-heading">
           <div>

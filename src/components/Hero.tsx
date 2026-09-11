@@ -19,7 +19,7 @@ export default function Hero() {
 
           <div className="hero-actions">
             <a href="#contact" className="button button-primary">
-              Let&apos;s build your next month →
+              Let&apos;s build your next month of marketing →
             </a>
 
             <a href="#process" className="button button-secondary">

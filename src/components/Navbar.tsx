@@ -9,7 +9,7 @@ export default function Navbar() {
             className="brand-logo"
           />
 
-          <span className="brand-name">INSIGHTBOLT</span>
+          <span className="brand-name">InsightBolt</span>
         </a>
 
         <nav className="desktop-nav" aria-label="Main navigation">

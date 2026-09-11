@@ -1509,3 +1509,444 @@ p {
     right: 18px;
   }
 }
+
+/* =========================
+   BUYING NOTES
+========================= */
+
+.buying-section {
+  padding: 120px 0;
+  overflow: hidden;
+}
+
+.buying-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 90px;
+}
+
+.buying-heading h2 {
+  max-width: 560px;
+  font-size: clamp(38px, 5vw, 62px);
+}
+
+.buying-content {
+  max-width: 650px;
+}
+
+.buying-list {
+  border-top: 1px solid var(--border-dark);
+}
+
+.buying-item {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 20px;
+  align-items: start;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.buying-item > span {
+  color: var(--signal-cyan);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.buying-item p {
+  color: #b2b4bb;
+  font-size: 15px;
+}
+
+.buying-final {
+  margin-top: 65px;
+  padding-top: 26px;
+  border-top: 1px solid var(--border-dark);
+}
+
+.buying-final p {
+  color: #858993;
+  font-size: 15px;
+}
+
+.buying-final strong {
+  display: block;
+  max-width: 570px;
+  margin-top: 8px;
+  color: var(--pure-white);
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(22px, 3vw, 32px);
+  line-height: 1.18;
+  letter-spacing: -0.035em;
+}
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.process-section {
+  padding: 120px 0;
+}
+
+.process-heading h2 {
+  max-width: 700px;
+  font-size: clamp(40px, 5vw, 64px);
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 65px;
+}
+
+.process-card {
+  min-height: 310px;
+  padding: 26px;
+  border: 1px solid var(--border-light);
+  background: var(--off-white);
+  border-radius: 10px;
+}
+
+.process-card-top {
+  display: flex;
+  justify-content: space-between;
+  color: var(--electric-blue);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.process-card h3 {
+  margin-top: 65px;
+  font-size: 27px;
+}
+
+.process-card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 25px;
+  padding: 0;
+  list-style: none;
+}
+
+.process-card li {
+  position: relative;
+  padding-left: 15px;
+  color: var(--muted-grey);
+  font-size: 14px;
+}
+
+.process-card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 5px;
+  height: 5px;
+  background: var(--electric-blue);
+}
+
+.process-repeat {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid var(--border-light);
+}
+
+.process-repeat span {
+  color: var(--muted-grey);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.process-repeat strong {
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+  letter-spacing: -0.04em;
+}
+
+/* =========================
+   FAQ
+========================= */
+
+.faq-section {
+  padding: 120px 0;
+  background: var(--off-white);
+}
+
+.faq-heading h2 {
+  max-width: 760px;
+  font-size: clamp(40px, 5vw, 64px);
+}
+
+.faq-list {
+  max-width: 900px;
+  margin-top: 65px;
+  border-top: 1px solid var(--border-light);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 27px 0;
+  border: 0;
+  background: transparent;
+  color: var(--text-dark);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.faq-question > span:first-child {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.faq-icon {
+  flex-shrink: 0;
+  color: var(--electric-blue);
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.25s ease;
+}
+
+.faq-answer p {
+  min-height: 0;
+  overflow: hidden;
+  max-width: 720px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.faq-item-open .faq-answer {
+  grid-template-rows: 1fr;
+}
+
+.faq-item-open .faq-answer p {
+  padding-bottom: 28px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+  padding: 120px 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+  gap: 90px;
+}
+
+.contact-heading h2 {
+  max-width: 570px;
+  font-size: clamp(40px, 5vw, 64px);
+}
+
+.contact-heading > p {
+  margin-top: 28px;
+  color: #a7a9b1;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.contact-promise {
+  display: block;
+  margin-top: 35px;
+  color: #73767f;
+  font-size: 12px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.contact-form label,
+.contact-form legend {
+  color: #a5a7ae;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  margin-top: 9px;
+  padding: 14px 15px;
+  border: 1px solid #303137;
+  border-radius: 7px;
+  outline: none;
+  background: #111114;
+  color: var(--pure-white);
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #62646c;
+}
+
+.contact-form select {
+  appearance: none;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 130px;
+  line-height: 1.6;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: var(--electric-blue);
+  background: #151519;
+}
+
+.contact-form fieldset {
+  border: 0;
+  padding: 0;
+}
+
+.contact-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.radio-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 14px;
+  border: 1px solid #303137;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.radio-option:hover {
+  border-color: #565961;
+}
+
+.radio-option input {
+  width: auto;
+  margin: 0;
+  accent-color: var(--electric-blue);
+}
+
+.radio-option span {
+  color: #b1b3ba;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.form-submit {
+  width: fit-content;
+  margin-top: 4px;
+  border: 0;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+}
+
+.form-note {
+  margin-top: -12px;
+  color: #6f727b;
+  font-size: 11px;
+}
+
+/* =========================
+   BUILD 7 RESPONSIVE
+========================= */
+
+@media (max-width: 1050px) {
+  .buying-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .buying-section,
+  .process-section,
+  .faq-section,
+  .contact-section {
+    padding: 80px 0;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-card {
+    min-height: auto;
+  }
+
+  .process-card h3 {
+    margin-top: 45px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    gap: 45px;
+  }
+
+  .contact-form {
+    gap: 20px;
+  }
+
+  .faq-question {
+    padding: 23px 0;
+  }
+
+  .faq-question > span:first-child {
+    font-size: 16px;
+  }
+}

@@ -6,6 +6,10 @@ import SignalLoop from "@/components/SignalLoop";
 import BehindBolt from "@/components/BehindBolt";
 import Work from "@/components/Work";
 import Packages from "@/components/Packages";
+import BuyingNotes from "@/components/BuyingNotes";
+import HowItWorks from "@/components/HowItWorks";
+import FAQ from "@/components/FAQ";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -20,20 +24,10 @@ export default function Home() {
         <BehindBolt />
         <Work />
         <Packages />
-
-        <section id="faq" className="future-section">
-          <div className="section-shell">
-            <div className="section-eyebrow">FAQ</div>
-            <h2>THE QUESTIONS PEOPLE ACTUALLY ASK.</h2>
-          </div>
-        </section>
-
-        <section id="start" className="future-section">
-          <div className="section-shell">
-            <div className="section-eyebrow">START A PROJECT</div>
-            <h2>LET&apos;S SEE IF WE MAKE SENSE.</h2>
-          </div>
-        </section>
+        <BuyingNotes />
+        <HowItWorks />
+        <FAQ />
+        <Contact />
       </main>
     </>
   );

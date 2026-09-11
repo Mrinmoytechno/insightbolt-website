@@ -1950,3 +1950,56 @@ p {
     font-size: 16px;
   }
 }
+
+/* =========================
+   CONTACT FORM STATES
+========================= */
+
+.contact-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form-submit:disabled {
+  opacity: 0.65;
+  cursor: wait;
+  transform: none;
+}
+
+.form-status {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 16px 18px;
+  border: 1px solid #303137;
+  background: #111114;
+}
+
+.form-status strong {
+  color: var(--pure-white);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.form-status span {
+  color: #999ba3;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.form-status-success {
+  border-color: rgba(37, 99, 235, 0.55);
+}
+
+.form-status-error {
+  border-color: rgba(220, 38, 38, 0.55);
+}
+
+.form-status-error strong {
+  color: #fca5a5;
+}

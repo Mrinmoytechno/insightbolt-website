@@ -88,6 +88,7 @@ export default function Packages() {
       id="packages"
     >
       <div className="section-shell">
+
         <div className="packages-heading">
           <div className="section-eyebrow section-eyebrow-light">
             PACKAGES
@@ -100,72 +101,90 @@ export default function Packages() {
           </h2>
 
           <p>
-            Because not every business needs us living
-            inside their Instagram account.
+            Because not every business needs us
+            living inside their Instagram account.
           </p>
         </div>
 
         <div className="packages-grid">
           {packages.map((pkg) => (
             <article
+              key={pkg.name}
               className={`package-card ${
                 pkg.featured
                   ? "package-card-featured"
                   : ""
               }`}
-              key={pkg.name}
             >
+
               {pkg.featured && (
                 <div className="package-badge">
                   MOST POPULAR
                 </div>
               )}
 
-              <div className="package-top">
+              <div className="package-card-header">
+
                 <div className="package-name">
                   {pkg.name}
                 </div>
 
-                <div className="package-price">
-                  {pkg.price}
-                </div>
+                <div className="package-price-row">
+                  <span className="package-price">
+                    {pkg.price}
+                  </span>
 
-                <div className="package-billing">
-                  {pkg.billing}
+                  <span className="package-billing">
+                    {pkg.billing}
+                  </span>
                 </div>
 
                 <p className="package-description">
                   {pkg.description}
                 </p>
+
               </div>
 
               <div className="package-divider" />
 
+              <div className="package-features-heading">
+                WHAT&apos;S INCLUDED
+              </div>
+
               <ul className="package-list">
                 {pkg.items.map((item) => (
                   <li key={item}>
-                    <span aria-hidden="true">
+                    <span
+                      className="package-check"
+                      aria-hidden="true"
+                    >
                       +
                     </span>
 
-                    <span>{item}</span>
+                    <span>
+                      {item}
+                    </span>
                   </li>
                 ))}
               </ul>
 
-              <a
-                href={pkg.href}
-                className={`package-link ${
-                  pkg.featured
-                    ? "package-link-featured"
-                    : ""
-                }`}
-              >
-                {pkg.cta}
-              </a>
+              <div className="package-card-footer">
+                <a
+                  href={pkg.href}
+                  className={`package-link ${
+                    pkg.featured
+                      ? "package-link-featured"
+                      : ""
+                  }`}
+                >
+                  {pkg.cta}
+                </a>
+              </div>
+
             </article>
           ))}
         </div>
+
       </div>
     </section>
   );

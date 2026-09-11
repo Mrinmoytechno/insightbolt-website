@@ -2792,3 +2792,416 @@ section {
     gap: 35px;
   }
 }
+
+/* =========================================================
+   PACKAGES — FINAL CARD SYSTEM
+========================================================= */
+
+.packages-section {
+  position: relative;
+}
+
+.packages-heading {
+  max-width: 720px;
+  margin-bottom: 64px;
+}
+
+/* ---------------------------------------------------------
+   GRID
+--------------------------------------------------------- */
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 16px;
+}
+
+/* ---------------------------------------------------------
+   CARD
+--------------------------------------------------------- */
+
+.package-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  min-height: 650px;
+
+  padding: 30px 26px 26px;
+
+  background: #111114;
+  border: 1px solid #29292e;
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-4px);
+  border-color: #414249;
+  background: #131316;
+}
+
+/* ---------------------------------------------------------
+   FEATURED CARD
+--------------------------------------------------------- */
+
+.package-card-featured {
+  border-color: rgba(37, 99, 235, 0.7);
+  background: #111318;
+}
+
+.package-card-featured:hover {
+  border-color: var(--electric-blue);
+}
+
+/* ---------------------------------------------------------
+   BADGE
+--------------------------------------------------------- */
+
+.package-badge {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  padding: 8px 12px;
+
+  background: var(--electric-blue);
+  color: var(--pure-white);
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+  line-height: 1;
+
+  border-bottom-left-radius: 7px;
+}
+
+/* ---------------------------------------------------------
+   CARD HEADER
+--------------------------------------------------------- */
+
+.package-card-header {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 188px;
+}
+
+/* ---------------------------------------------------------
+   PACKAGE NAME
+--------------------------------------------------------- */
+
+.package-name {
+  margin: 0 0 24px;
+
+  color: #8b8d95;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+}
+
+/* ---------------------------------------------------------
+   PRICE
+--------------------------------------------------------- */
+
+.package-price-row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+
+  column-gap: 8px;
+  row-gap: 4px;
+
+  margin: 0;
+}
+
+.package-price {
+  display: block;
+
+  margin: 0;
+
+  color: var(--pure-white);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: clamp(28px, 2.4vw, 38px);
+  font-weight: 700;
+
+  letter-spacing: -0.045em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.package-billing {
+  display: block;
+
+  margin: 0;
+
+  color: #777983;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 0.09em;
+  line-height: 1.2;
+
+  white-space: nowrap;
+}
+
+/* ---------------------------------------------------------
+   DESCRIPTION
+--------------------------------------------------------- */
+
+.package-description {
+  margin: 22px 0 0;
+
+  max-width: 280px;
+
+  color: #9b9da5;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  line-height: 1.65;
+}
+
+/* ---------------------------------------------------------
+   DIVIDER
+--------------------------------------------------------- */
+
+.package-divider {
+  width: 100%;
+  height: 1px;
+
+  flex-shrink: 0;
+
+  margin: 0 0 22px;
+
+  background: #29292e;
+}
+
+/* ---------------------------------------------------------
+   INCLUDED HEADING
+--------------------------------------------------------- */
+
+.package-features-heading {
+  margin-bottom: 15px;
+
+  color: #686a72;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+}
+
+/* ---------------------------------------------------------
+   FEATURE LIST
+--------------------------------------------------------- */
+
+.package-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.package-list li {
+  display: grid;
+  grid-template-columns: 16px minmax(0, 1fr);
+
+  column-gap: 8px;
+
+  margin: 0;
+  padding: 0;
+
+  color: #c2c4ca;
+
+  font-size: 12px;
+  font-weight: 400;
+
+  line-height: 1.5;
+}
+
+.package-check {
+  display: block;
+
+  color: var(--signal-cyan);
+
+  font-size: 13px;
+  font-weight: 700;
+
+  line-height: 1.5;
+}
+
+/* ---------------------------------------------------------
+   CARD FOOTER
+--------------------------------------------------------- */
+
+.package-card-footer {
+  display: flex;
+  align-items: flex-end;
+
+  margin-top: auto;
+  padding-top: 30px;
+}
+
+/* ---------------------------------------------------------
+   CTA
+--------------------------------------------------------- */
+
+.package-link {
+  display: inline-flex;
+  align-items: center;
+
+  width: 100%;
+  min-height: 44px;
+
+  padding: 12px 14px;
+
+  border: 1px solid #34353b;
+  border-radius: 7px;
+
+  color: #d8d9de;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 0.01em;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.package-link:hover {
+  transform: translateX(2px);
+
+  border-color: #555861;
+
+  background: #19191d;
+
+  color: var(--pure-white);
+}
+
+.package-link-featured {
+  border-color: var(--electric-blue);
+
+  background: var(--electric-blue);
+
+  color: var(--pure-white);
+}
+
+.package-link-featured:hover {
+  border-color: #1d4ed8;
+
+  background: #1d4ed8;
+
+  color: var(--pure-white);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .packages-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .package-card {
+    min-height: 620px;
+  }
+
+  .package-price {
+    font-size: 34px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+  .packages-heading {
+    margin-bottom: 44px;
+  }
+
+  .packages-grid {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+  .package-card {
+    min-height: auto;
+
+    padding: 28px 22px 22px;
+  }
+
+  .package-card-header {
+    min-height: 0;
+    padding-bottom: 26px;
+  }
+
+  .package-name {
+    margin-bottom: 20px;
+  }
+
+  .package-price {
+    font-size: 34px;
+  }
+
+  .package-description {
+    max-width: none;
+  }
+
+  .package-card-footer {
+    padding-top: 28px;
+  }
+
+  .package-link {
+    min-height: 48px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+  .package-price {
+    font-size: 30px;
+  }
+
+  .package-billing {
+    font-size: 8px;
+  }
+
+  .package-card {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}

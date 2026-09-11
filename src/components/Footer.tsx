@@ -15,7 +15,7 @@ export default function Footer() {
               aria-label="InsightBolt home"
             >
               <Image
-                src="/images/insightbolt-logo.png"
+                src="/images/insightbolt-dark.png"
                 alt=""
                 width={34}
                 height={34}

@@ -450,14 +450,13 @@ export default function Contact() {
                 WHATSAPP NUMBER *
 
                 <input
-                  type="tel"
-                  name="whatsapp"
-                  placeholder="+91 98765 43210"
-                  required
-                  maxLength={25}
-                  autoComplete="tel"
-                  inputMode="tel"
-                />
+  type="tel"
+  name="whatsapp"
+  placeholder="+91 98765 43210"
+  required={contactMethod === "WhatsApp"}
+  pattern="^\+[1-9][0-9]{0,2}[ -]?[0-9][0-9 -]{6,14}$"
+  title="Please include your country code, e.g. +91 98765 43210"
+/>
 
                 <span className="field-help">
                   Include your country

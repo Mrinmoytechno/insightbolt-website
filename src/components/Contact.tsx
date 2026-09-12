@@ -454,8 +454,9 @@ export default function Contact() {
   name="whatsapp"
   placeholder="+91 98765 43210"
   required={contactMethod === "WhatsApp"}
-  pattern="^\+[1-9][0-9]{0,2}[ -]?[0-9][0-9 -]{6,14}$"
-  title="Please include your country code, e.g. +91 98765 43210"
+  maxLength={16}
+  pattern="^\+[1-9][0-9]{0,2}[ -]?[0-9]{7,12}$"
+  title="Enter a valid WhatsApp number with country code, e.g. +91 98765 43210"
 />
 
                 <span className="field-help">

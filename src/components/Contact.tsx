@@ -2,6 +2,7 @@
 
 import {
   FormEvent,
+  useEffect,
   useState,
 } from "react";
 
@@ -79,6 +80,42 @@ export default function Contact() {
   ] = useState(
     getInitialPackage
   );
+
+  useEffect(() => {
+    function handlePackageSelect(
+      event: Event
+    ) {
+      const customEvent =
+        event as CustomEvent<{
+          packageValue?: string;
+        }>;
+
+      const packageValue =
+        customEvent.detail
+          ?.packageValue;
+
+      if (
+        packageValue &&
+        packages.includes(packageValue)
+      ) {
+        setSelectedPackage(
+          packageValue
+        );
+      }
+    }
+
+    window.addEventListener(
+      "insightbolt-package-select",
+      handlePackageSelect
+    );
+
+    return () => {
+      window.removeEventListener(
+        "insightbolt-package-select",
+        handlePackageSelect
+      );
+    };
+  }, []);
 
   async function handleSubmit(
     event: FormEvent<HTMLFormElement>

@@ -1,3 +1,7 @@
+"use client";
+
+import { MouseEvent } from "react";
+
 const packages = [
   {
     name: "LAUNCH",
@@ -80,6 +84,48 @@ const packages = [
     packageValue: "Growth Plus",
   },
 ];
+
+function selectPackage(
+  event: MouseEvent<HTMLAnchorElement>,
+  packageValue: string
+) {
+  event.preventDefault();
+
+  const url = new URL(
+    window.location.href
+  );
+
+  url.searchParams.set(
+    "package",
+    packageValue
+  );
+
+  url.hash = "contact";
+
+  window.history.pushState(
+    {},
+    "",
+    url.toString()
+  );
+
+  window.dispatchEvent(
+    new CustomEvent(
+      "insightbolt-package-select",
+      {
+        detail: {
+          packageValue,
+        },
+      }
+    )
+  );
+
+  document
+    .getElementById("contact")
+    ?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+}
 
 export default function Packages() {
   return (
@@ -173,6 +219,12 @@ export default function Packages() {
                   href={`/?package=${encodeURIComponent(
                     pkg.packageValue
                   )}#contact`}
+                  onClick={(event) =>
+                    selectPackage(
+                      event,
+                      pkg.packageValue
+                    )
+                  }
                   className={`package-link ${
                     pkg.featured
                       ? "package-link-featured"

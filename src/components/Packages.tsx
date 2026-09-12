@@ -15,7 +15,7 @@ const packages = [
       "7-day delivery",
     ],
     cta: "Start with Launch →",
-    href: "/?package=Launch#contact",
+    packageValue: "Launch",
   },
   {
     name: "STARTER",
@@ -33,7 +33,7 @@ const packages = [
       "Monthly performance summary",
     ],
     cta: "Start with Starter →",
-    href: "/?package=Starter#contact",
+    packageValue: "Starter",
   },
   {
     name: "GROWTH",
@@ -54,7 +54,7 @@ const packages = [
       "Next-month recommendations",
     ],
     cta: "Build with Growth →",
-    href: "/?package=Growth#contact",
+    packageValue: "Growth",
     featured: true,
   },
   {
@@ -77,7 +77,7 @@ const packages = [
       "Ad spend is separate.",
     ],
     cta: "Build with Growth Plus →",
-    href: "/?package=Growth%20Plus#contact",
+    packageValue: "Growth Plus",
   },
 ];
 
@@ -170,7 +170,9 @@ export default function Packages() {
 
               <div className="package-card-footer">
                 <a
-                  href={pkg.href}
+                  href={`/?package=${encodeURIComponent(
+                    pkg.packageValue
+                  )}#contact`}
                   className={`package-link ${
                     pkg.featured
                       ? "package-link-featured"

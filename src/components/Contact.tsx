@@ -37,6 +37,19 @@ function getInitialPackage() {
   return "";
 }
 
+function isValidWhatsAppNumber(
+  value: string
+) {
+  const normalized = value.replace(
+    /[\s-]/g,
+    ""
+  );
+
+  return /^\+[1-9]\d{7,14}$/.test(
+    normalized
+  );
+}
+
 export default function Contact() {
   const [
     isSubmitting,
@@ -76,15 +89,49 @@ export default function Contact() {
       return;
     }
 
-    setIsSubmitting(true);
-    setStatus("idle");
-    setErrorMessage("");
-
     const form =
       event.currentTarget;
 
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
     const formData =
       new FormData(form);
+
+    const whatsapp = String(
+      formData.get("whatsapp") || ""
+    ).trim();
+
+    if (
+      contactMethod === "WhatsApp" &&
+      !isValidWhatsAppNumber(whatsapp)
+    ) {
+      const whatsappInput =
+        form.elements.namedItem(
+          "whatsapp"
+        ) as HTMLInputElement | null;
+
+      whatsappInput?.setCustomValidity(
+        "Please enter a valid WhatsApp number with country code, e.g. +91 98765 43210"
+      );
+
+      whatsappInput?.reportValidity();
+
+      return;
+    }
+
+    const whatsappInput =
+      form.elements.namedItem(
+        "whatsapp"
+      ) as HTMLInputElement | null;
+
+    whatsappInput?.setCustomValidity("");
+
+    setIsSubmitting(true);
+    setStatus("idle");
+    setErrorMessage("");
 
     const payload = {
       name: formData.get("name"),
@@ -104,8 +151,7 @@ export default function Contact() {
         formData.get("message"),
       contactMethod:
         formData.get("contactMethod"),
-      whatsapp:
-        formData.get("whatsapp"),
+      whatsapp,
       website_honeypot:
         formData.get(
           "website_honeypot"
@@ -450,14 +496,55 @@ export default function Contact() {
                 WHATSAPP NUMBER *
 
                 <input
-  type="tel"
-  name="whatsapp"
-  placeholder="+91 98765 43210"
-  required={contactMethod === "WhatsApp"}
-  maxLength={16}
-  pattern="^\+[1-9][0-9]{0,2}[ -]?[0-9]{7,12}$"
-  title="Enter a valid WhatsApp number with country code, e.g. +91 98765 43210"
-/>
+                  type="tel"
+                  name="whatsapp"
+                  placeholder="+91 98765 43210"
+                  required
+                  maxLength={20}
+                  inputMode="tel"
+                  onInput={(event) => {
+                    const input =
+                      event.currentTarget;
+
+                    input.setCustomValidity("");
+
+                    const digits =
+                      input.value.replace(
+                        /\D/g,
+                        ""
+                      );
+
+                    if (
+                      digits.length > 15
+                    ) {
+                      input.value =
+                        input.value
+                          .replace(
+                            /\D/g,
+                            ""
+                          )
+                          .slice(0, 15);
+                    }
+                  }}
+                  onInvalid={(event) => {
+                    const input =
+                      event.currentTarget;
+
+                    if (
+                      input.validity
+                        .valueMissing
+                    ) {
+                      input.setCustomValidity(
+                        "Please enter your WhatsApp number."
+                      );
+                      return;
+                    }
+
+                    input.setCustomValidity(
+                      "Please include your country code, e.g. +91 98765 43210"
+                    );
+                  }}
+                />
 
                 <span className="field-help">
                   Include your country

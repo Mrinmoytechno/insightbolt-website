@@ -5,7 +5,7 @@ import { MouseEvent } from "react";
 const packages = [
   {
     name: "LAUNCH",
-    price: "₹4,999",
+    price: "₹2,999",
     billing: "ONE-TIME",
     description:
       "For businesses that want to test the waters.",
@@ -23,14 +23,14 @@ const packages = [
   },
   {
     name: "STARTER",
-    price: "₹7,999",
+    price: "₹6,999",
     billing: "/ MONTH",
     description:
       "For businesses that need consistent social media execution.",
     items: [
-      "8 content pieces",
-      "4 reels",
-      "4 carousels/static posts",
+      "10 content pieces",
+      "5 reels",
+      "5 carousels/static posts",
       "Monthly content calendar",
       "Instagram posting",
       "Basic profile optimisation",
@@ -41,14 +41,14 @@ const packages = [
   },
   {
     name: "GROWTH",
-    price: "₹14,999",
+    price: "₹12,999",
     billing: "/ MONTH",
     description:
       "Our main recurring system.",
     items: [
-      "12 content pieces",
-      "6 reels",
-      "6 carousels/static posts",
+      "14 content pieces",
+      "7 reels",
+      "7 carousels/static posts",
       "Instagram management",
       "Up to 12 stories",
       "1 campaign/offer plan",
@@ -63,14 +63,14 @@ const packages = [
   },
   {
     name: "GROWTH PLUS",
-    price: "₹24,999",
+    price: "₹18,999",
     billing: "/ MONTH",
     description:
       "For businesses ready for more execution + advertising.",
     items: [
-      "16 content pieces",
-      "8 reels",
-      "8 carousels/static posts",
+      "20 content pieces",
+      "10 reels",
+      "10 carousels/static posts",
       "Instagram management",
       "Up to 20 stories",
       "2 campaigns/offers",

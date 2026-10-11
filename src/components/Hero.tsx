@@ -8,7 +8,7 @@ export default function Hero() {
           </div>
 
           <h1>
-            For businesses people think about before they buy.
+            For businesses people are skeptical about before they buy.
           </h1>
 
           <p className="hero-description">

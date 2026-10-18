@@ -118,7 +118,7 @@ export default function BuilderSprintPopup() {
 
             <p className="bs-popup-description">
               Turn your idea into a real project through
-              CONTRIBE&apos;s 14-day Builder Sprint.
+              CONTRIBE&apos;s <br /> 14-day Builder Sprint.
             </p>
 
             <div className="bs-popup-offer">

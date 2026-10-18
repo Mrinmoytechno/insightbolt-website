@@ -76,6 +76,14 @@ export default function Navbar() {
               </a>
 
               <a
+  href="https://contribebuildersprint.vercel.app"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  CONTRIBE Builder Sprint ↗
+</a>
+
+              <a
                 href="#contact"
                 className="menu-panel-cta"
               >

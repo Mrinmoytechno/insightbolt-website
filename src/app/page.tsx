@@ -12,6 +12,9 @@ import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
+import BuilderSprintPopup from "@/components/BuilderSprintPopup";
+import BuilderSprintPartnership from "@/components/BuilderSprintPartnership";
+
 export default function Home() {
   return (
     <>
@@ -30,6 +33,9 @@ export default function Home() {
 
         <Work />
 
+        {/* CONTRIBE × InsightBolt partnership */}
+        <BuilderSprintPartnership />
+
         <Packages />
 
         <BuyingNotes />
@@ -42,6 +48,9 @@ export default function Home() {
       </main>
 
       <Footer />
+
+      {/* Promotional popup with partnership banner */}
+      <BuilderSprintPopup />
     </>
   );
 }

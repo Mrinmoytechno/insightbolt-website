@@ -63,7 +63,7 @@ export default function Navbar() {
                 How it works
               </a>
 
-              <a href="#work">
+              <a href="/#work">
                 Work
               </a>
 

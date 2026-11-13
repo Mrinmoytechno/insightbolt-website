@@ -1,4 +1,10 @@
+import Link from "next/link";
+import LatestInsights from "@/components/insights/LatestInsights";
+import { getAllInsights } from "@/lib/insights";
+
 export default function Work() {
+  const projects = getAllInsights();
+
   return (
     <section
       className="work-section section-light"
@@ -8,48 +14,42 @@ export default function Work() {
 
         <div className="work-heading">
           <div className="section-eyebrow">
-            WORK / PROOF
+            INSIGHTS / WORK
           </div>
 
-          <h2>
-            SHOW, DON&apos;T TELL.
-          </h2>
+          <h2>IDEAS BACKED BY RESEARCH.</h2>
 
           <p>
-            A marketing agency saying
-            &ldquo;we&apos;re good at
-            marketing&rdquo; isn&apos;t
-            exactly evidence.
+            Explore the thinking behind the work —
+            independent brand analyses, strategic
+            directions and creative concepts built
+            around how people make decisions.
           </p>
         </div>
 
-        <div className="work-library">
-          <div className="work-library-copy">
+        <LatestInsights projects={projects.slice(0, 10)} />
 
+        <div className="work-library">
+
+          <div className="work-library-copy">
             <div className="section-eyebrow">
-              BUILDING THE LIBRARY.
+              THE FULL LIBRARY
             </div>
 
             <h3>
-              We&apos;re documenting the
-              work as we build.
+              More thinking. More perspectives.
+              All in one place.
             </h3>
-
-            <p>
-              Want your business to be
-              one of the examples?
-            </p>
-
           </div>
 
-          <a
-            href="#contact"
+          <Link
+            href="/insights"
             className="button button-primary"
           >
-            Start a project →
-          </a>
-        </div>
+            Explore All <span aria-hidden="true">→</span>
+          </Link>
 
+        </div>
       </div>
     </section>
   );

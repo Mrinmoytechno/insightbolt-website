@@ -4120,3 +4120,155 @@ section {
   }
 
 }
+/* =========================================
+   INSIGHTBOLT — ARTICLE CREATIVE IMAGES
+========================================= */
+
+.insight-creative-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  width: 100%;
+}
+
+.insight-creative-card {
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  background: var(--pure-white);
+}
+
+.creative-image-wrapper {
+  width: 100%;
+  overflow: hidden;
+  background: #f4f6f8;
+}
+
+.creative-campaign-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.creative-image-placeholder {
+  min-height: 350px;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  background: var(--bolt-black);
+  color: white;
+}
+
+.creative-image-placeholder span {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+}
+
+.creative-image-placeholder strong {
+  font-size: clamp(24px, 4vw, 38px);
+  line-height: 1.1;
+}
+
+.creative-image-placeholder small {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.creative-concept-copy {
+  padding: 28px;
+}
+
+.creative-concept-copy h3 {
+  margin: 0 0 24px;
+}
+
+.creative-concept-copy dl {
+  margin: 0;
+}
+
+.creative-concept-copy dt {
+  margin-top: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.creative-concept-copy dd {
+  margin: 8px 0 0;
+  line-height: 1.7;
+}
+
+/* =========================================
+   INSIGHTBOLT — CIRCULAR ARTICLE LOADER
+========================================= */
+
+.insight-loading-screen {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f6f8;
+  padding: 24px;
+}
+
+.insight-loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.insight-loading-spinner {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: 3px solid rgba(37, 99, 235, 0.12);
+  border-top-color: #2563eb;
+  border-right-color: #00b8ff;
+  animation: insightBoltSpin 0.85s linear infinite;
+}
+
+.insight-loading-spinner span {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.insight-loading-content p {
+  margin: 25px 0 8px;
+  color: #0b0b0d;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.insight-loading-content small {
+  color: #64748b;
+  font-size: 12px;
+}
+
+@keyframes insightBoltSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+  .insight-creative-grid {
+    gap: 24px;
+  }
+
+  .creative-concept-copy {
+    padding: 22px;
+  }
+
+  .insight-loading-spinner {
+    width: 50px;
+    height: 50px;
+  }
+}

@@ -52,7 +52,9 @@ export default async function InsightDetailPage({
 
   const project = getInsightBySlug(slug);
 
-  if (!project) notFound();
+  if (!project) {
+    notFound();
+  }
 
   const all = getAllInsights();
 
@@ -75,8 +77,9 @@ export default async function InsightDetailPage({
       <Navbar />
 
       <main className="insight-detail-page">
-
         <div className="insight-detail-shell">
+
+          {/* BACK LINK */}
 
           <Link
             href={safeReturn}
@@ -88,6 +91,8 @@ export default async function InsightDetailPage({
               ? "homepage"
               : "all insights"}
           </Link>
+
+          {/* ARTICLE HEADER */}
 
           <header className="insight-detail-hero">
 
@@ -103,7 +108,9 @@ export default async function InsightDetailPage({
                     height={56}
                   />
                 ) : (
-                  <span>{project.brandInitials}</span>
+                  <span>
+                    {project.brandInitials}
+                  </span>
                 )}
 
               </div>
@@ -120,12 +127,14 @@ export default async function InsightDetailPage({
             </div>
 
             <div className="insight-card-labels">
+
               <span>{project.type}</span>
 
               <span>
                 {project.readingTime ??
                   "Research & strategy"}
               </span>
+
             </div>
 
             <h1>{project.title}</h1>
@@ -153,6 +162,8 @@ export default async function InsightDetailPage({
             )}
 
           </header>
+
+          {/* ARTICLE CONTENT */}
 
           <article className="insight-article">
 
@@ -193,6 +204,8 @@ export default async function InsightDetailPage({
               </section>
             ))}
 
+            {/* CAMPAIGN CREATIVES */}
+
             {project.creatives?.length ? (
               <section className="insight-creative-section">
 
@@ -220,23 +233,38 @@ export default async function InsightDetailPage({
                         key={creative.name}
                       >
 
-                        <div className="creative-concept-art">
+                        {/* ACTUAL CREATIVE IMAGE */}
 
-                          <span>
-                            CONCEPT 0{i + 1}
-                          </span>
+                        <div className="creative-image-wrapper">
 
-                          <strong>
-                            {creative.headline}
-                          </strong>
+                          {creative.image ? (
+                            <Image
+                              src={creative.image}
+                              alt={`${creative.name} campaign creative`}
+                              width={1080}
+                              height={1440}
+                              className="creative-campaign-image"
+                              unoptimized
+                            />
+                          ) : (
+                            <div className="creative-image-placeholder">
+                              <span>
+                                CONCEPT 0{i + 1}
+                              </span>
 
-                          <small>
-                            {creative.supporting}
-                          </small>
+                              <strong>
+                                {creative.headline}
+                              </strong>
 
-                          <i>{creative.name}</i>
+                              <small>
+                                {creative.supporting}
+                              </small>
+                            </div>
+                          )}
 
                         </div>
+
+                        {/* CREATIVE STRATEGY */}
 
                         <div className="creative-concept-copy">
 
@@ -265,13 +293,18 @@ export default async function InsightDetailPage({
                   )}
 
                 </div>
+
               </section>
             ) : null}
+
+            {/* LIMITATIONS */}
 
             {project.limitations?.length ? (
               <section className="insight-article-section insight-limitations">
 
-                <h2>Limitations &amp; assumptions</h2>
+                <h2>
+                  Limitations &amp; assumptions
+                </h2>
 
                 <ul>
                   {project.limitations.map(
@@ -283,6 +316,8 @@ export default async function InsightDetailPage({
 
               </section>
             ) : null}
+
+            {/* SOURCES */}
 
             {project.sources?.length ? (
               <section className="insight-article-section insight-sources">
@@ -307,6 +342,8 @@ export default async function InsightDetailPage({
             ) : null}
 
           </article>
+
+          {/* PREVIOUS AND NEXT PROJECTS */}
 
           <nav
             className="insight-project-navigation"
@@ -341,10 +378,12 @@ export default async function InsightDetailPage({
 
           </nav>
 
+          {/* ARTICLE FOOTER */}
+
           <div className="insight-detail-end">
 
             <span>
-             INSIGHTS &amp; WORK
+              INSIGHTS &amp; WORK
             </span>
 
             <Link href="/insights">

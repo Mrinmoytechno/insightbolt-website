@@ -15,6 +15,7 @@ export type InsightCreative = {
   audience: string;
   strategy: string;
   visual: string;
+  image?: string;
 };
 
 export type InsightProject = {
@@ -34,19 +35,33 @@ export type InsightProject = {
   summary?: string;
   sections: InsightSection[];
   creatives?: InsightCreative[];
-  sources?: { label: string; url: string }[];
+  sources?: {
+    label: string;
+    url: string;
+  }[];
   limitations?: string[];
 };
 
-const CONTENT_DIR = path.join(process.cwd(), "content", "insights");
+const CONTENT_DIR = path.join(
+  process.cwd(),
+  "content",
+  "insights"
+);
 
 export function getAllInsights(): InsightProject[] {
-  if (!fs.existsSync(CONTENT_DIR)) return [];
+  if (!fs.existsSync(CONTENT_DIR)) {
+    return [];
+  }
 
-  return fs.readdirSync(CONTENT_DIR)
+  return fs
+    .readdirSync(CONTENT_DIR)
     .filter((file) => file.endsWith(".json"))
     .map((file) => {
-      const fullPath = path.join(CONTENT_DIR, file);
+      const fullPath = path.join(
+        CONTENT_DIR,
+        file
+      );
+
       return JSON.parse(
         fs.readFileSync(fullPath, "utf8")
       ) as InsightProject;
@@ -73,7 +88,9 @@ export function getInsightSlugs(): string[] {
   );
 }
 
-export function formatInsightDate(date: string): string {
+export function formatInsightDate(
+  date: string
+): string {
   return new Intl.DateTimeFormat("en", {
     day: "numeric",
     month: "short",

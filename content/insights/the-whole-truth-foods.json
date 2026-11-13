@@ -112,34 +112,37 @@
     }
   ],
   "creatives": [
-    {
-      "name": "Protein bar concept",
-      "headline": "YOUR DAY DOESN'T WAIT. YOUR SNACK CAN KEEP UP.",
-      "supporting": "A convenient way to include protein in your day.",
-      "objective": "Connect the portable bar format to a busy, on-the-go situation.",
-      "audience": "People with busy schedules who look for convenient snack options.",
-      "strategy": "Situational relevance: make the usage moment immediately recognisable.",
-      "visual": "A premium desk or commute-inspired composition with cocoa-toned styling. Insert verified current product packaging before treating this as a publishable advertisement."
-    },
-    {
-      "name": "Protein powder concept",
-      "headline": "YOUR FITNESS GOALS NEED MORE THAN MOTIVATION.",
-      "supporting": "Make your daily protein intake part of the plan.",
-      "objective": "Position protein planning as one practical part of a broader fitness routine.",
-      "audience": "People who train and are interested in planning their nutrition.",
-      "strategy": "Routine association: connect the product category to a repeatable behaviour without promising results.",
-      "visual": "A clean fitness setting with a prepared shake and space for verified current product packaging. Do not add unverified nutrition numbers or performance claims."
-    },
-    {
-      "name": "Muesli concept",
-      "headline": "YOUR MORNING DESERVES MORE THAN A RUSH.",
-      "supporting": "Make room for a breakfast worth looking forward to.",
-      "objective": "Connect the product category to a more considered breakfast moment.",
-      "audience": "People looking for convenient and enjoyable breakfast options.",
-      "strategy": "Emotional and situational relevance: frame breakfast as a small everyday experience.",
-      "visual": "A bright breakfast-table composition with a bowl and ingredients. Insert verified current product packaging before publication."
-    }
-  ],
+  {
+    "name": "Protein bar concept",
+    "headline": "YOUR DAY DOESN'T WAIT. YOUR SNACK CAN KEEP UP.",
+    "supporting": "A convenient way to include protein in your day.",
+    "objective": "Connect the portable bar format to a busy, on-the-go situation.",
+    "audience": "People with busy schedules who look for convenient snack options.",
+    "strategy": "Situational relevance: make the usage moment immediately recognisable.",
+    "visual": "A premium desk or commute-inspired composition with cocoa-toned styling. Insert verified current product packaging before treating this as a publishable advertisement.",
+    "image": "/images/insights/the-whole-truth-foods/protein-bar-concept.png"
+  },
+  {
+    "name": "Protein powder concept",
+    "headline": "YOUR FITNESS GOALS NEED MORE THAN MOTIVATION.",
+    "supporting": "Make your daily protein intake part of the plan.",
+    "objective": "Position protein planning as one practical part of a broader fitness routine.",
+    "audience": "People who train and are interested in planning their nutrition.",
+    "strategy": "Routine association: connect the product category to a repeatable behaviour without promising results.",
+    "visual": "A clean fitness setting with a prepared shake and space for verified current product packaging. Do not add unverified nutrition numbers or performance claims.",
+    "image": "/images/insights/the-whole-truth-foods/protein-powder-concept.png"
+  },
+  {
+    "name": "Muesli concept",
+    "headline": "YOUR MORNING DESERVES MORE THAN A RUSH.",
+    "supporting": "Make room for a breakfast worth looking forward to.",
+    "objective": "Connect the product category to a more considered breakfast moment.",
+    "audience": "People looking for convenient and enjoyable breakfast options.",
+    "strategy": "Emotional and situational relevance: frame breakfast as a small everyday experience.",
+    "visual": "A bright breakfast-table composition with a bowl and ingredients. Insert verified current product packaging before publication.",
+    "image": "/images/insights/the-whole-truth-foods/muesli-concept.png"
+  }
+],
   "sources": [
     {
       "label": "The Whole Truth Foods — Official website",

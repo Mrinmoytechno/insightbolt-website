@@ -106,7 +106,7 @@ export default function BuilderSprintPopup() {
               aria-label="Explore CONTRIBE Builder Sprint"
             >
               <Image
-                src="/images/insightbolt-partnership-banner.webp"
+                src="/images/insightbolt-partnership-banner.png"
                 alt="Explore the CONTRIBE and InsightBolt partnership"
                 width={1200}
                 height={675}
